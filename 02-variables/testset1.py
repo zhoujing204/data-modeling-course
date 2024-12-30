@@ -10,19 +10,20 @@ test_ids ={
     "test_greet": 0,
     "test_get_hypotenuse": 0,
     "test_get_third_side": 0,
+    "test_nearest_sq": 0
 }
 
 def reset_test_ids_values():
     for key in test_ids.keys():
         test_ids[key] = 0
 
-def test_name_and_student_id(name, student_id):
+def test_name_and_student_id(student_name, student_id):
     """测试习题一：学生的名字和学号是否填好"""
     test_name = "习题一：test_name_and_student_id"
     test_ids["test_name_and_student_id"] = 0
-    assert name is not None, '请在name变量中填入你的名字'
+    assert student_name is not None, '请在name变量中填入你的名字'
     assert student_id is not None, '请在student_id变量中填入你的学号'
-    print('你的名字是：', name)
+    print('你的名字是：', student_name)
     print('你的学号是：', student_id)
     test_ids["test_name_and_student_id"] = 1
     print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
@@ -54,7 +55,7 @@ def test_greet(target):
 
 def test_get_hypotenuse(target):
     """测试习题五"""
-    test_name="test_get_hypotenuse"
+    test_name="习题五：test_get_hypotenuse"
     test_ids["test_get_hypotenuse"] = 0
     assert target(3, 4) == pytest.approx(5.0) , "第五题答案不正确，请检查你的答案"
     assert target(6, 8) == pytest.approx(10.0)
@@ -104,6 +105,55 @@ def test_get_third_side_arbitrary(target):
     result = target(4, 5, math.pi/4)  # 45度
     expected = math.sqrt(4**2 + 5**2 - 2*4*5*math.cos(math.pi/4))
     assert result == pytest.approx(expected)
+
+def test_nearest_sq(target):
+    """测试习题七"""
+    test_name="习题七：test_nearest_sq"
+    test_ids["test_nearest_sq"] = 0
+    assert target(1) == 1
+    assert target(2) == 1
+    assert target(10) == 9
+    assert target(111) == 121
+    assert target(9999) == 10000
+    test_ids["test_nearest_sq"] = 1
+    print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
+
+def grade_all_tests(test_args):
+    reset_test_ids_values()
+    all_tests = [
+        (test_name_and_student_id, test_args[0]),
+        (test_quiz2, test_args[1]),
+        (test_subtract_abc, test_args[2]),
+        (test_greet, test_args[3]),
+        (test_get_hypotenuse, test_args[4]),
+        (test_get_third_side, test_args[5]),
+        (test_nearest_sq, test_args[6])
+    ]
+    for test_func, arg in all_tests:
+        try:
+            if isinstance(arg, tuple):
+                test_func(*arg)
+            else:
+                test_func(arg)
+        except AssertionError as e:
+            print("习题测试失败:", e)
+        except Exception as e:
+            print("测试过程中出现其它异常:", e)
+    print(colored(f"恭喜你{sum(test_ids.values())}/{len(test_ids)} 个测试", "green"))
+    print(colored(f"你的代码自动评分成绩是：{sum(test_ids.values()) * 10}", "green"))
+
+# def grade_all_tests(test_args):
+#     reset_test_ids_values()
+#     test_name_and_student_id(*test_args[0])
+#     test_quiz2(test_args[1])
+#     test_subtract_abc(test_args[2])
+#     test_greet(test_args[3])
+#     test_get_hypotenuse(test_args[4])
+#     test_get_third_side(test_args[5])
+#     test_nearest_sq(test_args[6])
+#     print(colored(f"恭喜你{sum(test_ids.values())}/{len(test_ids)} 个测试", "green"))
+#     print(colored(f"你的代码自动评分成绩是：{sum(test_ids.values()) * 10}", "green"))
+
 
 # TODO
 # 第一阶段
