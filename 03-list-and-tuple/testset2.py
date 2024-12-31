@@ -1,11 +1,11 @@
-# 实验一的测试集， 进行实验的同学请不要修改测试文件的内容。
+# 实验二的测试集， 进行实验的同学请不要修改测试文件的内容。
 from termcolor import colored
 import pytest
 import math
 
 test_ids ={
-    "test_name_and_student_id": 0,
-    "test_quiz2": 0,
+    "get_first_last": 0,
+    "test_pop_and_append": 0,
     "test_subtract_abc": 0,
     "test_greet": 0,
     "test_get_hypotenuse": 0,
@@ -16,6 +16,30 @@ test_ids ={
 def reset_test_ids_values():
     for key in test_ids.keys():
         test_ids[key] = 0
+
+def test_get_first_last(target):
+    """测试习题一"""
+    test_name="习题一：test_get_first_last"
+    test_ids["get_first_last"] = 0
+    assert target([1, 2, 3, 4, 5]) == [1, 5], "第一题答案不正确，请检查你的答案"
+    assert target([1]) == [1, 1], "第一题答案不正确，请检查你的答案"
+    assert target([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 10], "第一题答案不正确，请检查你的答案"
+    test_ids["get_first_last"] = 1
+    print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
+
+def test_pop_and_append(target):
+    """测试习题二"""
+    test_name="习题二：test_pop_and_append"
+    test_ids["test_pop_and_append"] = 0
+    lst = [1, 2, 3, 4, 5]
+    target(lst)
+    assert lst == [2, 3, 4, 5, 1], "第二题答案不正确，请检查你的答案"
+    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    target(lst)
+    assert lst == [2, 3, 4, 5, 6, 7, 8, 9, 10, 1], "第二题答案不正确，请检查你的答案"
+    test_ids["test_pop_and_append"] = 1
+    print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
+
 
 def test_name_and_student_id(student_name, student_id):
     """测试习题一：学生的名字和学号是否填好"""
@@ -159,18 +183,15 @@ def grade_all_tests(test_args):
 # 第一阶段
 # 1. 将学生的信息：姓名，学号，ip地址，mac地址，当前实验id，传输到fastapi服务器，方面实验完成时校验信息。
 # 2. 学生在本地编写代码进行实验并对实验代码测试，测试完成后在本地会得到本次实验的实验成绩。
-# 3. 将实验成绩、实验代码、测试代码的文件哈希（防止学生修改实验代码）传输到fastapi服务器，方便教师查看学生的实验成绩。
+# 3. 将实验成绩、实验代码、测试代码（防止学生修改实验代码）传输到fastapi服务器，方便教师查看学生的实验成绩。
 # 4. 校验学生的信息以及实验代码，包括：ip地址，mac地址，实验代码是否被修改，实验代码是否通过测试。
 # 5. 将实验成绩保存到数据库。
 # 6. 使用网页展示学生的实验成绩、实验代码等相关信息。
 # 7. 将学生的实验成绩导出为excel文件。
-# 8. 编写测试用例，对上述功能进行测试。
 
 
 # TODO
 # 第二阶段
 # 1. 将所有的实验题目、题目相关的信息以及对应的测试代码、测试用例保存到数据库中。
 # 2. 在客户端（Vscode, Jupter Notebook或者网页）可以新建、查看、修改、删除实验题目以及测试代码。
-# 3. 教师端的同步功能：在教师客户端（Jupyter NotebookNotebook）修改的实验题目、测试代码、测试代码文件哈希等信息可以同步到fastapi服务器。
-# 4. 学生端的同步功能：在学生客户端（Jupyter Notebook）同步后可以获取到修改后的实验题目、测试代码、测试代码文件哈希等信息。
-# 5. 编写测试用例，对上述功能进行测试。
+# 3. 在客户端修改的实验题目、测试代码等信息可以同步到fastapi服务器。
