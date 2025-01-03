@@ -4,7 +4,6 @@ CREATE TABLE instructors (
     instructor_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     phone VARCHAR(20),
-    phone VARCHAR(20),
     department VARCHAR(50),
     title VARCHAR(50),          -- e.g., '教授', '讲师'
     office_location VARCHAR(50),
@@ -13,7 +12,7 @@ CREATE TABLE instructors (
     password_hash VARCHAR(255) NOT NULL,  -- For authentication
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT valid_email CHECK (email ~* '^[A-Za-z0-9._+%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$')
+
 );
 
 -- Indexes for common queries
@@ -56,8 +55,8 @@ CREATE TABLE students (
     password_hash VARCHAR(255) NOT NULL,            -- For authentication
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (class_id) REFERENCES classes(class_id),  -- 外键
-    CONSTRAINT valid_email CHECK (email ~* '^[A-Za-z0-9._+%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$')
+    FOREIGN KEY (class_id) REFERENCES classes(class_id)  -- 外键
+
 );
 
 -- Indexes for common queries
@@ -127,8 +126,6 @@ CREATE TABLE student_grades (
     notes TEXT,
     UNIQUE(student_id, assignment_id)
 );
-
-
 
 -- Indexes
 CREATE INDEX idx_student_grades_student ON student_grades(student_id);
