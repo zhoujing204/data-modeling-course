@@ -119,6 +119,7 @@ def test_nearest_sq(target):
     print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
 
 def grade_all_tests(test_args):
+    """对所有的测试进行评分"""
     reset_test_ids_values()
     all_tests = [
         (test_name_and_student_id, test_args[0]),

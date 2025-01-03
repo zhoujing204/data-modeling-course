@@ -1,0 +1,748 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 2,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 9,
+			"com.tldraw.shape.note": 8,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 0,
+			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 4,
+			"com.tldraw.shape.video": 2,
+			"com.tldraw.binding.arrow": 0
+		}
+	},
+	"records": [
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"x": -389.1874694824219,
+			"y": 124.85708618164062,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:a62Pqz5qzQxJzC8-fUk-A",
+			"type": "geo",
+			"props": {
+				"w": 119.9910888671875,
+				"h": 160.41070556640625,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"text": "班级\n班级id",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 53.147308349609375,
+			"y": -129.6339225769043,
+			"lastActivityTimestamp": 1735801143490,
+			"meta": {}
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:geo": "rectangle"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "move",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1416.0001220703125,
+				"h": 753.7142944335938
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.7499998807907104,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:awTSemUmivy-BGbXK8UBu"
+			],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 493.7098693847656,
+			"y": 166.20535278320312,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": -182.932861328125,
+			"y": 90.83918762207031,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:LMU2cmwww2_L5_Psx8BMG",
+			"type": "geo",
+			"props": {
+				"w": 217.12506103515625,
+				"h": 244.80361938476562,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"text": "学生\n学生id\n学号\n姓名\n班级id（fk）",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a26OU",
+			"typeName": "shape"
+		},
+		{
+			"x": 347.2194519042969,
+			"y": -122.84810447692871,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:vi4ep4T5DF95ssHnMAuiC",
+			"type": "geo",
+			"props": {
+				"w": 143.1338348388672,
+				"h": 164.6875286102295,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"text": "实验表\n实验id\n实验名称",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a39Xx",
+			"typeName": "shape"
+		},
+		{
+			"x": 564.5046081542969,
+			"y": -22.991134643554688,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:JnwCx5P4-udSQkoo3pFDf",
+			"type": "geo",
+			"props": {
+				"w": 176.4107513427734,
+				"h": 258.0625,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"text": "习题表\n习题id\n习题名称\n实验id（fk）",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a49ZW",
+			"typeName": "shape"
+		},
+		{
+			"x": 377.7276916503906,
+			"y": 48.53572082519531,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:6tri-6yCgQecnZnpm7V52",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 140.5625,
+					"y": 49.25898742675781
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a502V",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:htbP0bPdQT8f7eID558zF",
+			"type": "arrow",
+			"fromId": "shape:6tri-6yCgQecnZnpm7V52",
+			"toId": "shape:vi4ep4T5DF95ssHnMAuiC",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.9771113924595882,
+					"y": 0.3161943993490272
+				},
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "binding:_KgDxzn1Tp-6oeYd_tA-k",
+			"type": "arrow",
+			"fromId": "shape:6tri-6yCgQecnZnpm7V52",
+			"toId": "shape:JnwCx5P4-udSQkoo3pFDf",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.045450429040791857,
+					"y": 0.5039617714451138
+				},
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 80.58480834960938,
+			"y": 172.53573608398438,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:TmdA52dyc96rryOF6TkEu",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 217.70550537109375,
+					"y": -138.74107360839844
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a3m9r",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:YL8AZNmNv4CY2Akg4LnoZ",
+			"type": "arrow",
+			"fromId": "shape:TmdA52dyc96rryOF6TkEu",
+			"toId": "shape:LMU2cmwww2_L5_Psx8BMG",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.9740511056320429,
+					"y": 0.6526005940118865
+				},
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "binding:P0aKlClGnOlGDNxcDwZv0",
+			"type": "arrow",
+			"fromId": "shape:TmdA52dyc96rryOF6TkEu",
+			"toId": "shape:vi4ep4T5DF95ssHnMAuiC",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.1054523023385029,
+					"y": 0.4779508874481564
+				},
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": -243.9866485595703,
+			"y": 175.39288330078125,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:xqGfGNCsqWFJkamOPoGYF",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 105.13392639160156,
+					"y": -38.7410888671875
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a2lji",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:hT2nq6ZoO7pAvUEdEKgHD",
+			"type": "arrow",
+			"fromId": "shape:xqGfGNCsqWFJkamOPoGYF",
+			"toId": "shape:a62Pqz5qzQxJzC8-fUk-A",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.9433359665176959,
+					"y": 0.49387786706258235
+				},
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "binding:TWzBeUM-YSXX8YOMohAUP",
+			"type": "arrow",
+			"fromId": "shape:xqGfGNCsqWFJkamOPoGYF",
+			"toId": "shape:LMU2cmwww2_L5_Psx8BMG",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.0634089386646397,
+					"y": 0.4313226269910774
+				},
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 314.1126403808594,
+			"y": 292.687744140625,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:gbYuzYLsnIHbb92CDyyU9",
+			"type": "geo",
+			"props": {
+				"w": 185.11602783203125,
+				"h": 230.0626831054688,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"text": "学生习题表\n学生id（fk）\n实验（id）\n习题（id）\n习题得分\n时间",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a62SQ",
+			"typeName": "shape"
+		},
+		{
+			"x": 32.584808349609375,
+			"y": 265.107177734375,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GbpG6KW52M_CHqmDZ_1Du",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 278.27691650390625,
+					"y": 117.83041381835938
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a74nZ",
+			"typeName": "shape"
+		},
+		{
+			"x": 461.1563415527344,
+			"y": 377.1071472167969,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:L5wWw_zRkAdfkIgr9mgJI",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 133.705322265625,
+					"y": -155.88385009765625
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a8Bla",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:MgSE9Ay6RM-ZjmmVb8icK",
+			"type": "arrow",
+			"fromId": "shape:L5wWw_zRkAdfkIgr9mgJI",
+			"toId": "shape:gbYuzYLsnIHbb92CDyyU9",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.8640544153670319,
+					"y": 0.47032897146656993
+				},
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "binding:Z8Q459qzltCUVpQf6g9jA",
+			"type": "arrow",
+			"fromId": "shape:L5wWw_zRkAdfkIgr9mgJI",
+			"toId": "shape:JnwCx5P4-udSQkoo3pFDf",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.2789240441457264,
+					"y": 0.8382871391756479
+				},
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 123.89773559570312,
+			"y": 45.47315216064453,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:64fQToZ3Dzp_ekb6YVqPK",
+			"type": "geo",
+			"props": {
+				"w": 182.55357360839844,
+				"h": 174.5178985595703,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"text": "学生实验表\n学生id\n实验id\n实验得分\n时间",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 5.9642486572265625,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a9BFW",
+			"typeName": "shape"
+		},
+		{
+			"x": -69.75430297851562,
+			"y": -164.02677440643305,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:gf9cxhHLcev760BsGw0So",
+			"type": "geo",
+			"props": {
+				"w": 194.28582763671875,
+				"h": 224.11613559722892,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"text": "",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aAB1Z",
+			"typeName": "shape"
+		},
+		{
+			"x": 345.7277526855469,
+			"y": -71.46427917480469,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:1U5prY4Tl_lc7q2TuAukk",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": -261.72332763671875,
+					"y": -24.455352783203125
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aB3xz",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:X0q6WqILII0iOg_xUBnAV",
+			"type": "arrow",
+			"fromId": "shape:1U5prY4Tl_lc7q2TuAukk",
+			"toId": "shape:gf9cxhHLcev760BsGw0So",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.9905209191326672,
+					"y": 0.2837729873295188
+				},
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 206.86154174804688,
+			"y": -125.06249237060547,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:G4oZn2OZ8sidshJLkzMNc",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 72.99107360839844,
+				"text": "一对一",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aC14B",
+			"typeName": "shape"
+		},
+		{
+			"x": -28.040069580078125,
+			"y": -170.76784896850586,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:awTSemUmivy-BGbXK8UBu",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 120.97322082519531,
+				"text": "\n测试文件表\n测试文件id\n文件内容\n文件哈希\n版本号\n更新日期",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aE4Xm",
+			"typeName": "shape"
+		}
+	]
+}

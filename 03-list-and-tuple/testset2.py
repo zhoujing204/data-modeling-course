@@ -2,20 +2,72 @@
 from termcolor import colored
 import pytest
 import math
+import ast
+import inspect
 
 test_ids ={
     "get_first_last": 0,
     "test_pop_and_append": 0,
-    "test_subtract_abc": 0,
-    "test_greet": 0,
-    "test_get_hypotenuse": 0,
-    "test_get_third_side": 0,
+    "test_cubic_numbers": 0,
+    "test_get_titled_names": 0,
+    "test_sort_capitalized_names": 0,
+    "test_get_ticket_price": 0,
     "test_nearest_sq": 0
 }
 
 def reset_test_ids_values():
     for key in test_ids.keys():
         test_ids[key] = 0
+
+def test_get_ticket_price(target):
+    """测试习题六"""
+    test_name="习题六：test_get_ticket_price"
+    test_ids["test_get_ticket_price"] = 0
+    assert target(100, 5) ==  (0, 0), "第七题答案不正确，请检查你的答案"
+    assert target(100, 6) ==  (15, .5),  "第七题答案不正确，请检查你的答案"
+    assert target(100, 14) == (15, .5), "第七题答案不正确，请检查你的答案"
+    assert target(100, 15) == (30, 1), "第七题答案不正确，请检查你的答案"
+    assert target(100, 59) == (30, 1), "第七题答案不正确，请检查你的答案"
+    assert target(100, 60) == (21, .7), "第七题答案不正确，请检查你的答案"
+    test_ids["test_get_ticket_price"] = 1
+    print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
+
+def test_sort_capitalized_names(target):
+    """测试习题五"""
+    test_name="习题五：test_sort_capitalized_names"
+    test_ids["test_sort_capitalized_names"] = 0
+    assert target(['ada lovelace']) == ['Ada Lovelace'], "第五题答案不正确，请检查你的答案"
+    assert target(['bbb', 'ccc', 'aaa']) == ['Aaa', 'Bbb', 'Ccc'], "第五题答案不正确，请检查你的答案"
+    test_ids["test_sort_capitalized_names"] = 1
+    print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
+
+def test_get_titled_names(target):
+    """测试习题四"""
+    test_name="习题四：test_get_titled_names"
+    test_ids["test_get_titled_names"] = 0
+    tree = ast.parse(inspect.getsource(target))
+    has_listcomp = any(isinstance(node, ast.ListComp) for node in ast.walk(tree))
+    assert has_listcomp, f"函数 {target.__name__} 必须包含列表推导式：[ 变量表达式  for 变量  in 列表] "
+    assert target(['ada lovelace', 'alan turing', 'grace hopper']) == ['Ada Lovelace', 'Alan Turing', 'Grace Hopper'], "第四题答案不正确，请检查你的答案"
+    assert target(['ada lovelace']) == ['Ada Lovelace'], "第四题答案不正确，请检查你的答案"
+    test_ids["test_get_titled_names"] = 1
+    print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
+
+
+def test_cubic_numbers(target):
+    """测试习题三"""
+    test_name="习题三：test_cubic_numbers"
+    test_ids["test_cubic_numbers"] = 0
+    tree = ast.parse(inspect.getsource(target))
+    has_listcomp = any(isinstance(node, ast.ListComp) for node in ast.walk(tree))
+    assert has_listcomp, f"函数 {target.__name__} 必须包含列表推导式：[ 变量表达式  for 变量  in 列表] "
+    assert target(1) == [1], "第三题答案不正确，请检查你的答案"
+    assert target(2) == [1, 8], "第三题答案不正确，请检查你的答案"
+    assert target(3) == [1, 8, 27], "第三题答案不正确，请检查你的答案"
+    assert target(4) == [1, 8, 27, 64], "第三题答案不正确，请检查你的答案"
+    assert target(10) == [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000], "第三题答案不正确，请检查你的答案"
+    test_ids["test_cubic_numbers"] = 1
+    print(colored(f"恭喜你通过了{test_name}测试。{sum(test_ids.values())}/{len(test_ids)} ", "green"))
 
 def test_get_first_last(target):
     """测试习题一"""
